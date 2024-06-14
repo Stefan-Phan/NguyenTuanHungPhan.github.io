@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>	My TODO List Page</title>    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="ToDoList.css">
+    </head>
+
+    <body> 
+        <a href="phany036_Assignment2_IT.html" class="nav-button">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <div class="container">
+            <div class="todo-app">
+                <h2>TODO LIST</h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="What would you like to do?">
+                    <button onclick="AddTask()">Add</button>
+                </div>
+                <ul id="list-container"></ul>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const inputBox = document.getElementById("input-box");
+        const listContainer = document.getElementById("list-container");
+        
+        //-------------------------Add Task and Remove Task function------------------------------------
+        function AddTask() {
+            
+            // Users must write something before clicking the button
+            if(inputBox.value === '') {
+                alert("You must write something!");
+            }
+            else {
+                let li = document.createElement("li");
+                li.innerHTML = inputBox.value;
+                listContainer.appendChild(li);
+                
+                //Add the remove Button, if the remove-button is clicked, the line will be deleted also
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "\u00d7";
+                removeButton.classList.add("remove-button");
+                removeButton.onclick = function() {
+                    listContainer.removeChild(li);
+                    SaveTask();
+                }
+
+                //append the button on the same line of the task
+                li.appendChild(removeButton);
+                SaveTask();
+
+            }
+            
+            inputBox.value = "";
+        }
+
+        //save the data to LocalStorage
+        function SaveTask() {
+            localStorage.setItem("tasks", listContainer.innerHTML);
+        }
+
+        //Load the data from LocalStorage
+        function LoadTask() {
+            listContainer.innerHTML = localStorage.getItem("tasks");
+
+            listContainer.addEventListener('click', function(retrieveRemoveButton) {
+
+                //Check if the li contains remove button or not
+                if (event.target.classList.contains('remove-button')) {
+                    
+                    //Delete the parent of the Element (the li contains that remove button).
+                    listContainer.removeChild(event.target.parentElement);
+                    SaveTask();
+                }
+            });
+        }
+        LoadTask();
+    </script>
+</html>

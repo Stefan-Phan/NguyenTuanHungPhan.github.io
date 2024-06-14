@@ -1,0 +1,126 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    font-family: "Saira Condensed", sans-serif;
+}
+
+/* -----------------Home button--------------------*/
+.nav-button {
+    background-color: rgb(232, 68, 68);
+    color: white;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: ;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button i {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+.nav-button:hover {
+    background-color: rgb(255, 0, 140);
+}
+
+.Course {
+    width: 80%;
+    margin: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(https://insiderguides.com.au/wp-content/uploads/2023/07/shutterstock_2301013955-scaled.jpg);
+    background-position: bottom;
+}
+
+.CourseColumn  {
+    margin-bottom: 30px;
+    position: relative;
+    flex-basis: 32%;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.CourseColumn  img{
+    width: 100%;
+    border-radius: 15px;
+    height: 600px;
+}
+
+.CourseRow {
+    display: flex;
+    margin-top: 30px;
+}
+
+/* -------------------Text's Effect--------------------*/
+.CourseInfo {
+    background: transparent;
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    width: 100%;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    position: absolute;
+    opacity: 0;
+    transition: 0.9s;
+}
+
+.CourseInfo h2 {
+    font-size: 35px;
+    padding: 20px;
+    line-height: 100%;
+}
+
+.CourseInfo p {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.CourseInfo:hover {
+    bottom: 49%;
+    opacity: 1;
+    background: rgba(248, 68, 68, 0.7);
+}
+
+.CourseDescription h1 span{
+    color: rgb(232, 68, 68);
+    font-size: 100px;
+    line-height: 90%;
+}
+
+.CourseDescription h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.CourseDescription p {
+    font-size: 30px;
+    font-weight: 10px;
+    color: white;
+}
+
+.CourseDescription {
+    text-align: center;
+}
+
+
+

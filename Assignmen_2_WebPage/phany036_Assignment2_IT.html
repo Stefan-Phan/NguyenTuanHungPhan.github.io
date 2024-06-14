@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>	My page title</title>    
+        
+        <!------------------------- Add font from google -------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        
+        <!------------------- Add icon from fontawesome ------------------------>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!----------------- print hello user's name ------------------>
+        <section class="Hello">
+            <div class="Enterbutton">
+                <input id="userInput" placeholder="What is your name?">
+                <div class="buttonname">
+                    <button onclick="ChangeName()">Enter</button>
+                </div>
+            </div>
+    
+            <h1 id="message"></h1>
+        </section>
+
+        <!------------------------- Toggle Theme ------------------->
+        <div class="ToggleTheme">
+            <i class="fa-solid fa-moon" id="icon"></i>
+        </div>
+
+        <!------------------- digital clock start ------------------>
+        <div class="datetime">
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+
+        <!----------------- The first visable page ------------------>
+        <header>
+            <div class="header-content">
+                <h1>THE WONDERFUL <br><span>UNIVERSITY LIFE</span></h1>
+            </div>
+        </header>
+
+        <!--------------------- The nav button --------------------->
+        <div class="mainChange">
+            <div class="changePage">
+                <a href="Course.html" class="nav-button">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>COURSES</span>
+                </a>
+                <a href="Password.html" class="nav-button">
+                    <i class="fa-solid fa-list"></i>
+                    <span>TODO LIST</span>
+                </a>
+            </div>  
+        </div> 
+        
+        <!-------------------- The information about me -------------------->
+        <div class="aboutmesheet">
+            <div class="aboutmecolumn"><img src="/img/Rectangle 3.png" alt=""></div>
+            <div class="aboutmecolumn">
+                <div class="myintroducing"> 
+                    <div class="line1"></div>   
+                    <div class="heading2">
+                        <h1>HI, I'M <span>STEFAN</span></h1>
+                        <h2>AN INTERNATIONAL STUDENT</h2>
+                    </div>
+                </div>
+                <p>My name is Nguyen Tuan Hung Phan, an international student from 
+                    Vietnam, is studying at the University of South Australia in 
+                    Adelaide, majoring in Information Technology.</p>
+            </div>
+        </div>
+
+        <!--------------------- My current difficulties -------------------->
+        <div class="difficulty">
+            <div class="diffcolumn">
+                <h1>SOME <span>DIFFICULTY</span> OF AN INTERNATIONAL STUDENT</h1>
+                <p class="description">Embarking on a journey to study abroad is
+                    undoubtedly exhilarating, but it comes with its unique set of
+                    challenges, especially for those whose second language is 
+                    English.</p>
+            </div>
+            <div class="diffcolumn">
+                <div class="card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h5>Language Barrier</h5>
+                    <p>Understanding lectures and completing assignments can be difficult.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h5>Cultural Adjusment</h5>
+                    <p>Adapting to new social norms and customs is often overwhelming.</p>
+                </div>
+            </div>    
+            <div class="diffcolumn">
+                <div class="seconddiffcolumn">
+                    <div class="card">
+                        <i class="fa-solid fa-school"></i>
+                        <h5>Academic Expectations</h5>
+                        <p>Different educational systems require adapting to unfamiliar learning methods.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-house"></i>
+                        <h5>Homesickness</h5>
+                        <p>Being away from home can lead to feelings of isolation.</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!-------------------------- 3 months experience at UniSA -------------------------->
+        <section>
+            <div class="experience">
+                <div class="main_image">
+                    <img src="img/campus.jpg" id="USASA"><br>
+                    <p id="ImageDescription">This is a campus image.</p>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="changeImage('Attending the first orientation day at UniSA on February 22, 2024, was both exciting and overwhelming for me as an international student with English as my second language. While I was eager to meet new people and learn about the university, I also felt a bit anxious about navigating a new environment and communicating effectively. Overall, it was a significant step toward starting my academic journey in a foreign country. Source: Nguyen Tuan Hung Phan ', '/img/Orientation.jpg')">Orientation</button><br>
+                    <button onclick="changeImage('Making friends with fellow international students while studying abroad has been a heartwarming experience. Playing basketball, studying together, and sharing personal stories have not only helped me improve my English but also created a sense of belonging and mutual support. These friendships have become a cherished part of my journey, making the experience truly enriching. Source: Nguyen Tuan Hung Phan','/img/friend.jpg')">Friends</button><br>
+                    <button onclick="changeImage('Engaging in activities and joining university events at my new university has been an exhilarating experience as an international student. It has provided me with opportunities to immerse myself in the campus culture, meet diverse people, and enhance my sense of community. These experiences have made my transition smoother and more enjoyable, helping me feel more connected and involved. Source: Graduation Ceremony at 16 April 2024 by USASA.', 'https://media.licdn.com/dms/image/C5622AQEC8EHMDgC0gQ/feedshare-shrink_2048_1536/0/1649741879297?e=2147483647&v=beta&t=BFZlR3wXUvBr0vEe5HsE5QBUqXczuWJOlhcALcQwWRU')">Activity</button><br>
+                    <button onclick="changeImage('Enrolling in the wrong class, intended for second-semester students, was initially a stressful mistake, especially since I had no prior knowledge of coding and found myself in an OOP programming course. However, this unexpected challenge has turned out to be quite fascinating, as it highlighted the areas where I need to practice and learn more, sparking a newfound interest in programming. Source: USASA.', 'https://unisa.edu.au/siteassets/media-centre/images/media-release-images/2019/university_of_south_australia_bradleybuild_-1.jpg')">Incident</button><br>
+                </div>
+            </div>
+        </section>
+        
+
+        <!---------------------------- Script section---------------------->
+        <script>
+            //-----------------------Script to print hello user's name-----------------------//
+            function ChangeName() {
+                let userInput = document.querySelector("#userInput");
+                let message = document.querySelector("#message");
+
+                //Save the username to localStorage
+                localStorage.setItem("UserName", userInput.value); 
+                message.innerHTML = "Hello " + userInput.value;
+            }
+
+            //-------------------Window onload-----------------------//
+            window.onload = function() {
+
+                //-------------------UserName LocalStorage-------------------//
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                userName = urlParams.get('UserName');
+
+                if (userName) {
+                    localStorage.setItem("userName", userName);
+                } else {
+                    userName = localStorage.getItem("UserName");
+                }
+
+                if (userName) {
+                    document.querySelector("#message").innerHTML = "Hello " + userName;
+                }
+
+
+                //-------------------------Toggle LocalStorage-------------------------//
+                icon = document.getElementById("icon");
+                OldTheme = localStorage.getItem("PageTheme");
+                if (OldTheme) {
+                    document.body.className = OldTheme;
+                    if (OldTheme === 'dark-theme') {
+                        icon.classList.remove("fa-moon");
+                        icon.classList.add("fa-sun");
+                    } else {
+                        icon.classList.add("fa-moon");
+                        icon.classList.remove("fa-sun");
+                    }
+                }
+            };
+
+            //-------------Date and Time -----------------//
+            const timeElement = document.querySelector(".time");
+            const dateElement = document.querySelector(".date");
+
+            //-------------Time------------//
+            function formatTime(date) {
+                const hours123 = date.getHours() % 12 || 12;
+                const minutes = date.getMinutes();
+                const seconds = date.getSeconds();
+                const isAm = date.getHours() < 12;
+
+                //-------------Instead of display 9:1 AM, it will display 09:01AM-----------------------//
+                return `${hours123.toString().padStart(2, "0")} : ${minutes.toString().padStart(2, "0")} : ${seconds.toString().padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+            }
+
+            //-------------Date---------------//
+            function formatDate(date) {
+                const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                const MONTHS = ["January", "February", "March", "April", " May", "June", "July", "August", "September", "October", "November", "December", ]
+            
+                return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`
+            }
+
+            setInterval(() => {
+                const now = new Date();
+
+                timeElement.textContent = formatTime(now);
+                dateElement.textContent = formatDate(now);
+            }, 200);
+
+            //Script to change image//
+            function changeImage(description, fileName) {
+                let img = document.querySelector("#USASA")
+                img.setAttribute('src', fileName);
+                document.getElementById('ImageDescription').innerText = description;
+            }
+
+            // ---------------------Toggle--------------------------------//
+            var icon = document.getElementById("icon");
+            icon.onclick = function() {
+                document.body.classList.toggle("dark-theme");
+                if (document.body.classList.contains("dark-theme")) {
+                    icon.classList.remove("fa-moon");
+                    icon.classList.add("fa-sun");
+                    
+                    //Save to LocalStorage
+                    localStorage.setItem('PageTheme', 'dark-theme');
+                } else {
+                    icon.classList.add("fa-moon");
+                    icon.classList.remove("fa-sun");
+                    
+                    //Save to LocalStorage
+                    localStorage.setItem('PageTheme', 'light-theme');
+                }
+            }
+        </script>
+
+        <!-- My Courses that I'm currently studying -->
+    </body>
+</html>
